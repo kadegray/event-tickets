@@ -49,7 +49,7 @@ export class EventsComponent {
     return this.events;
   }
 
-  getEventImage(event: Event) {
-    return event.images.find(img => img.ratio === '16_9');
+  getEventImage(event: Event, ratio: string = '16_9', size: number = 1136): Image | undefined {
+    return event.images.find(img => img.ratio === ratio && img.width === size);
   }
 }
