@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HalResource } from 'hal-types';
 import { Observable } from 'rxjs';
 import { environment } from './../environments/environment';
-import * as moment from 'moment';
+import * as dayjs from 'dayjs';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +21,7 @@ export class EventService {
   ): Observable<HalResource> {
 
     let urlSearchParams = new URLSearchParams({
-      apikey: environment.ticketmaterApiKey,
+      apikey: environment.ticketmasterApiKey,
       locale: '*',
     });
 
@@ -29,8 +29,8 @@ export class EventService {
 
     const filters = [
       ['city', city],
-      ['startDateTime', startDateTime ? moment(startDateTime).format() : undefined],
-      ['endDateTime', endDateTime ? moment(endDateTime).format() : undefined]
+      ['startDateTime', startDateTime ? dayjs(startDateTime).format() : undefined],
+      ['endDateTime', endDateTime ? dayjs(endDateTime).format() : undefined]
     ];
     
     filters.forEach((f: Array<any>) => {

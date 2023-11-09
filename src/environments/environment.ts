@@ -1,4 +1,4 @@
 export const environment = {
-    ticketmaterApiKey: 'TICKETMASTER_API_KEY',
+    ticketmasterApiKey: 'TICKETMASTER_API_KEY',
     defaultCity: 'Brisbane',
 };
