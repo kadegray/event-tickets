@@ -1,1 +1,6 @@
-<p>events works!</p>
+<!-- Events -->
+<div class="grid grid-cols-4 gap-4 p-10">
+  <div *ngFor="let event of events">
+    <img class="w-full h-full object-fill" [src]="getEventImage(event)?.url" />
+  </div>
+</div>
