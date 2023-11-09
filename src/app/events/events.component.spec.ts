@@ -2,6 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EventsComponent } from './events.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 describe('EventsComponent', () => {
   let component: EventsComponent;
@@ -12,6 +19,17 @@ describe('EventsComponent', () => {
       declarations: [EventsComponent],
       imports: [
         HttpClientModule,
+        MatFormFieldModule,
+        MatAutocompleteModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        NoopAnimationsModule,
+        MatDatepickerModule,
+        MatNativeDateModule
+      ],
+      providers: [
+        MatDatepickerModule,
       ]
     });
     fixture = TestBed.createComponent(EventsComponent);
