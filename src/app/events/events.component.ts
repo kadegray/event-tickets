@@ -2,26 +2,8 @@ import { Component } from '@angular/core';
 import { debounceTime, lastValueFrom } from 'rxjs';
 import { EventService } from '../event.service';
 import { FormControl, FormGroup } from '@angular/forms';
-
-export interface Image {
-  ratio: string;
-  url: string;
-  width: number;
-  height: number;
-  fallback: boolean;
-}
-
-export interface Event {
-  id: number;
-  type: string;
-  name: string;
-  test: boolean;
-  locale: string;
-  images: Array<Image>;
-  dates: Object;
-  sales: Object;
-  url: string;
-}
+import { Image } from '../types/image.type';
+import { Event } from '../types/event.type';
 
 @Component({
   selector: 'app-events',
