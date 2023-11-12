@@ -32,7 +32,7 @@ export class EventService {
       ['startDateTime', startDateTime ? dayjs(startDateTime).format() : undefined],
       ['endDateTime', endDateTime ? dayjs(endDateTime).format() : undefined]
     ];
-    
+
     filters.forEach((f: Array<any>) => {
       const [filter, value] = f;
       if ([null, undefined, ''].includes(value)) {

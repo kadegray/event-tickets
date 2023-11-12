@@ -6,6 +6,7 @@
   <mat-form-field>
     <mat-label>City</mat-label>
     <input
+      data-cy="city-input"
       type="text"
       matInput
       [formControl]="cityFormControl"
@@ -22,7 +23,11 @@
       <input matStartDate formControlName="start" placeholder="Start date" />
       <input matEndDate formControlName="end" placeholder="End date" />
     </mat-date-range-input>
-    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker-toggle
+      matIconSuffix
+      [for]="picker"
+      data-cy="date-toggle"
+    ></mat-datepicker-toggle>
     <mat-date-range-picker #picker></mat-date-range-picker>
   </mat-form-field>
 </div>
